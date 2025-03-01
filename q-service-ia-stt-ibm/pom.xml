@@ -41,7 +41,7 @@
         <dependency>
             <groupId>com.ibm.watson</groupId>
             <artifactId>speech-to-text</artifactId>
-            <version>11.0.0</version> <!-- Versão mais recente até o momento -->
+            <version>11.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
