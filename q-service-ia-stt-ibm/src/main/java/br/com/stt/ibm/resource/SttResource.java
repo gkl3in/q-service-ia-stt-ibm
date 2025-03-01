@@ -24,7 +24,6 @@ public class SttResource {
     @Path("/transcrever")
     public TranscricaoResponse transcrever(TranscricaoRequest request) {
         byte[] audioBytes = Base64.getDecoder().decode(request.base64Audio());
-
         ByteArrayInputStream bais = new ByteArrayInputStream(audioBytes);
 
         String texto = sttService.transcreverAudio(bais, request.contentType(), request.model());

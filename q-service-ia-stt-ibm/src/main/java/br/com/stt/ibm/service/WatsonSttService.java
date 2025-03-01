@@ -35,7 +35,7 @@ public class WatsonSttService {
             RecognizeOptions.Builder builder = new RecognizeOptions.Builder()
                     .audio(audioStream)
                     .contentType(contentType)
-                    .model(model != null ? model : "en-US_BroadbandModel") // ou pt-BR_BroadbandModel
+                    .model(model != null ? model : "pt-BR_BroadbandModel")
                     .maxAlternatives(1)
                     .smartFormatting(true);
 
@@ -43,7 +43,6 @@ public class WatsonSttService {
 
             SpeechRecognitionResults results = speechToText.recognize(options).execute().getResult();
 
-            // Pegar a primeira transcrição de exemplo.
             if (results.getResults() != null && !results.getResults().isEmpty()) {
                 return results
                         .getResults()
